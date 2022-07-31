@@ -1,0 +1,162 @@
+.button{
+    -fx-background-color: rgb(224, 194, 177);
+        background-color: rgb(224, 194, 177);
+    -fx-text-fill: rgb(80, 56, 60);
+    -fx-border-color: rgb(80, 56, 60);
+        border-color: rgb(80, 56, 60);
+    -fx-border-radius: 3;
+        border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 3 6 6 6;
+        padding: 3 6 6 6;
+    -font-family: "Times New Roman"; 
+}
+.button:hover{
+    -fx-background-color: rgb(206, 172, 151);
+        background-color: rgb(206, 172, 151);
+    -fx-border-radius: 1000;
+        border-radius: 1000;
+    -fx-background-radius: 1000;
+}
+.text-field{
+    -fx-background-color: -fx-text-box-border, rgb(190, 157, 138);
+        background-color: -fx-text-box-border, rgb(190, 157, 138);
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.input.text-field {
+    -fx-prompt-text-fill: rgb(120, 97, 83);
+}
+.menubtn{
+    -fx-background-color: rgb(224, 194, 177);
+        background-color: rgb(224, 194, 177);
+    -fx-border-radius: 3;
+        border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-text-fill: rgb(0,0,0);
+}
+.menubtn:hover{
+    -fx-background-color: rgb(206, 172, 151);
+        background-color: rgb(206, 172, 151);
+    -fx-border-radius: 1000;
+        border-radius: 1000;
+    -fx-background-radius: 1000;
+    -fx-border-color: rgb(80, 56, 60);
+        border-color: rgb(80, 56, 60);
+    -fx-text-fill: rgb(80, 56, 60);
+}
+.menu-item{
+    -fx-background-color: rgb(224, 194, 177);
+        background-color: rgb(224, 194, 177);
+    -fx-border-radius: 3;
+        border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-border-color: rgb(80, 56, 60);
+        border-color: rgb(80, 56, 60);
+}
+.menu-item:focused{
+    -fx-background-color: rgb(206, 172, 151);
+        background-color: rgb(206, 172, 151);
+    -fx-border-radius: 1000;
+        border-radius: 1000;
+    -fx-background-radius: 1000;
+    -fx-text-fill: rgb(80, 56, 60);
+}
+.bg-img {
+    -fx-background-image: url("loginBackground.jpeg");
+        background-image: url("loginBackground.jpeg");
+    -fx-background-position: center;
+        background-position: center;
+    -fx-background-repeat: no-repeat;
+        background-repeat: no-repeat;
+    -fx-background-size: cover;
+        background-size: cover;
+}
+.bg-color {
+    -fx-background-color: rgb(190, 157, 138);
+        background-color: rgb(190, 157, 138);
+}
+/* .popUpPane {
+    -fx-background-color: rgb(184, 184, 184);
+        background-color: rgb(184, 184, 184);
+    -text-align: center;
+        color: black;
+        
+    -font-family: "Times New Roman";
+        size: 12px;
+} */
+
+.table-view{
+    -fx-background-color:  rgb(224, 194, 177);
+        background-color:  rgb(224, 194, 177);
+ }
+ 
+ .table-view:focused{
+     -fx-background-color: rgb(206, 172, 151);
+         background-color: rgb(206, 172, 151);
+ }
+ 
+ /* Spaltenköpfe
+     Struktur column-header-background -> column-header */
+ 
+ .table-view .column-header-background{
+     -fx-background-color: linear-gradient(#8b7583 0%, #6b5a6b 100%);
+         background-color: linear-gradient(#8b7583 0%, #6b5a6b 100%);
+ }
+ 
+ .table-view .column-header-background .label{
+     -fx-background-color: transparent;
+         background-color: transparent;
+     -fx-text-fill: white;
+ }
+ 
+ .table-view .column-header {
+     -fx-background-color: transparent;
+         background-color: transparent;
+ }
+ 
+ .table-view .table-cell{
+     -fx-text-fill: rgb(41, 36, 36);
+ }
+ 
+ .table-row-cell{
+     -fx-background-color: -fx-table-cell-border-color, #dbc3c3;
+         background-color: -fx-table-cell-border-color, #dbc3c3;
+     -fx-background-insets: 0, 0 0 1 0;
+     -fx-padding: 0.0em; /* 0 */
+         padding: 0.0em;
+ }
+ 
+ .table-row-cell:odd{
+     -fx-background-color: -fx-table-cell-border-color, #dbc3c3;
+         background-color: -fx-table-cell-border-color, #dbc3c3;
+     -fx-background-insets: 0, 0 0 1 0;
+     -fx-padding: 0.0em; /* 0 */  
+         padding: 0.0em;
+ }
+ 
+ .table-row-cell:selected {
+     -fx-background-color: #b393b3;
+         background-color: #b393b3;
+     -fx-background-insets: 0;
+     -fx-background-radius: 1;
+ }
+ 
+ .table-view > .virtual-flow > .scroll-bar:vertical,
+ .table-view > .virtual-flow > .scroll-bar:vertical > .track,
+ .table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+ .table-view > .virtual-flow > .scroll-bar:horizontal,
+ .table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+ .table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+     -fx-background-color: transparent;
+         background-color: transparent;
+ }
+ 
+ 
+ 
+ .table-view > .virtual-flow > .scroll-bar > .increment-button, 
+ .table-view > .virtual-flow > .scroll-bar > .decrement-button {
+     -fx-opacity: 0;
+         opacity: 0;
+ }
+

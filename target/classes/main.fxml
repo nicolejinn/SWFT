@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="background" prefHeight="553.0" prefWidth="1000.0" styleClass="bg-color" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <Pane fx:id="mainHelp" layoutX="899.0" layoutY="15.0" prefHeight="17.0" prefWidth="15.0">
+         <children>
+            <Circle fill="#9ea3a8" layoutX="7.0" layoutY="9.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" styleClass="bg-color" />
+            <ImageView fitHeight="17.0" fitWidth="15.0" layoutY="1.0">
+               <image>
+                  <Image url="@tutorial.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="pane" layoutX="56.0" layoutY="148.0" prefHeight="250.0" prefWidth="364.0">
+         <children>
+           <TableView fx:id="ToDoTable" layoutX="-51.0" layoutY="-60.0" prefHeight="311.0" prefWidth="200.0" stylesheets="@stylesheet.css">
+              <columns>
+                <TableColumn fx:id="ToDoColumn" prefWidth="200.0" text="TODO" />
+              </columns>
+               <effect>
+                  <Blend />
+               </effect>
+            </TableView>
+         </children>
+      </Pane>
+      <Button layoutX="930.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToLogin" stylesheets="@stylesheet.css" text="Logout" />
+      <ButtonBar layoutX="341.0" layoutY="450.0" prefHeight="40.0" prefWidth="611.0">
+        <buttons>
+              <Button fx:id="switchToTimer" onAction="#switchToTimer" stylesheets="@stylesheet.css" text="Open Timer" />
+            <Button fx:id="mode" mnemonicParsing="false" onAction="#setModeWithBackground" stylesheets="@stylesheet.css" text="Light Mode" />
+            <Button fx:id="displayToDo" mnemonicParsing="false" onAction="#toggleButton" text="TODO List" />
+            <Button fx:id="pauseAudio" mnemonicParsing="false" onAction="#pauseAudio" stylesheets="@stylesheet.css" text="Pause Audio" />
+            <Button fx:id="pauseMedia" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="33.0" stylesheets="@stylesheet.css" text="Pause Media" />
+        </buttons>
+      </ButtonBar>
+      <Text fx:id="welcomeText" layoutX="414.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome to SWFT! pick some music, pick a favourite background and lets get to studing!" wrappingWidth="200.0" /> 
+     <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="700.0" layoutX="252.0" layoutY="48.0" />
+      <Pane fx:id="toDoHelp" layoutX="209.0" layoutY="72.0" prefHeight="17.0" prefWidth="15.0">
+         <children>
+            <Circle fill="#9ea3a8" layoutX="7.0" layoutY="9.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" styleClass="bg-color" />
+            <ImageView fitHeight="17.0" fitWidth="15.0">
+               <image>
+                  <Image url="@tutorial.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ButtonBar layoutX="341.0" layoutY="490.0" prefHeight="40.0" prefWidth="611.0">
+         <buttons>
+            <MenuButton fx:id="playlist" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" styleClass="menubtn" stylesheets="@stylesheet.css" text="Spotify Playlists">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#playJazz" text="Jazz" />
+                <MenuItem mnemonicParsing="false" onAction="#playClassical" text="Classical" />
+                  <MenuItem mnemonicParsing="false" onAction="#playPunk" text="Punk Rock" />
+                  <MenuItem mnemonicParsing="false" onAction="#playKpop" text="K-pop" />
+                  <MenuItem mnemonicParsing="false" onAction="#playCasual" text="Casual" />
+                  <MenuItem mnemonicParsing="false" onAction="#playHype" text="Hype" />
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="media" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" styleClass="menubtn" stylesheets="@stylesheet.css" text="Background Media">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#setBeachBackground" text="Beach" />
+                  <MenuItem mnemonicParsing="false" onAction="#setRainforestBackground" text="Rainforest" />
+                  <MenuItem mnemonicParsing="false" onAction="#setCafeBackground" text="Cafe" />
+                  <MenuItem mnemonicParsing="false" onAction="#setParkBackground" text="Park" />
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="backgroundColor" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" styleClass="menubtn" stylesheets="@stylesheet.css" text="Background Color">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#setRedBackground" text="Red" />
+                  <MenuItem mnemonicParsing="false" onAction="#setOrangeBackground" text="Orange" />
+                  <MenuItem mnemonicParsing="false" onAction="#setYellowBackground" text="Yellow" />
+                  <MenuItem mnemonicParsing="false" onAction="#setGreenBackground" text="Green" />
+                  <MenuItem mnemonicParsing="false" onAction="#setBlueBackground" text="Blue" />
+                  <MenuItem mnemonicParsing="false" onAction="#setPurpleBackground" text="Purple" />
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="audio" mnemonicParsing="false" prefWidth="167.0" styleClass="menubtn" stylesheets="@stylesheet.css" text="Built in Audio">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#setRainAudio" text="Rain" />
+                  <MenuItem mnemonicParsing="false" onAction="#setCafeAudio" text="Cafe noise" />
+                  <MenuItem mnemonicParsing="false" onAction="#setOceanAudio" text="Beach Waves" />
+                <MenuItem mnemonicParsing="false" onAction="#setRelaxingAudio" text="Relaxing" />
+              </items>
+            </MenuButton>
+         </buttons>
+      </ButtonBar>
+      <TextField fx:id="task" layoutX="8.0" layoutY="408.0" prefHeight="33.0" prefWidth="200.0" promptText="Add your task here!">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></TextField>
+      <Text fx:id="welcomeText" layoutX="414.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome to SWFT! pick some music, pick a favourite background and lets get to studing!" wrappingWidth="200.0" />
+      <Button fx:id="addTask" layoutX="9.0" layoutY="446.0" mnemonicParsing="false" onAction="#addToDo" prefHeight="33.0" prefWidth="94.0" text="Add Task" />
+      <Button fx:id="deleteTask" layoutX="108.0" layoutY="446.0" mnemonicParsing="false" onAction="#doneTask" prefHeight="33.0" prefWidth="94.0" text="Delete Task" />
+      <Text fx:id="welcomeText" layoutX="414.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome to SWFT! pick some music, pick a favourite background and lets get to studing!" wrappingWidth="200.0" /> 
+     <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="750.0" layoutX="139.0" layoutY="50.0" />
+      <Pane fx:id="cubeHelp" layoutX="259.0" layoutY="482.0" prefHeight="17.0" prefWidth="15.0">
+         <children>
+            <Circle fill="#9ea3a8" layoutX="7.0" layoutY="9.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" styleClass="bg-color" />
+            <ImageView fitHeight="17.0" fitWidth="15.0" layoutY="1.0">
+               <image>
+                  <Image url="@tutorial.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Box fx:id="box" depth="30.0" height="30.0" layoutX="310.0" layoutY="490.0" onMouseDragged="#mouseDragged" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" onMousePressed="#mousePressed" width="30.0">
+         <rotationAxis>
+            <Point3D x="1.0" y="1.0" z="1.0" />
+         </rotationAxis></Box>
+   </children>
+</Pane>
